@@ -9,16 +9,15 @@ import UIKit
 
 final class ViewController: UIViewController {
 
-    var сategories = [["Авиарежим", "Wi-Fi", "Bluetooth", "Сотовая связь", "Режим модема", "Уведомления"], ["Звуки, тактильные сигналы", "Фокусирование",                 "Экранное время", "Основные"], ["Экран и яркость", "Телефон", "Сообщения", "Почта", "Конфиденциальность"]]
-    var dataCategories = ["", "Выкл.", "Вкл.", "", "Выкл.", " "]
-    var icon = [["avia", "wifi", "bluetooth", "mobile", "modem", "remind"], ["sound", "sleep", "watch", "setups"], ["screen", "phone", "messege", "mail", "confid"]]
+ static let identifier = "ViewController"
+    let models = Models()
 
     //MARK: - Outlets
 
     private lazy var tableView: UITableView = {
-        var tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.backgroundColor = .systemGray6
+        var tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
+        tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,15 +28,19 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Настройки"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupTableView()
         setupHierarchy()
         setupLayout()
     }
     
 
     //MARK: - Setup
+
+    private func setupTableView() {
+        view.backgroundColor = .white
+        title = "Настройки"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
     private func setupHierarchy() {
         view.addSubview(tableView)
