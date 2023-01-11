@@ -11,7 +11,7 @@ class SettingsTableViewCell: UITableViewCell {
 
     static let identifier = "SettingsTableViewCell"
 
-    private lazy var iconView: UIImageView = {
+    private lazy var iconViewSetting: UIImageView = {
         let iconView = UIImageView()
         iconView.tintColor = .white
         iconView.contentMode = .center
@@ -19,16 +19,16 @@ class SettingsTableViewCell: UITableViewCell {
         return iconView
     }()
 
-    private let label: UILabel = {
+    private let labelSetting: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 15.5, weight: .regular)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    private let iconConteiner: UIView = {
+    private let iconConteinerSetting: UIView = {
         var iconConteiner = UIView()
         iconConteiner.clipsToBounds = true
         iconConteiner.layer.cornerRadius = 5
@@ -52,36 +52,36 @@ class SettingsTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        iconView.image = nil
-        label.text = nil
-        iconConteiner.backgroundColor = nil
+        iconViewSetting.image = nil
+        labelSetting.text = nil
+        iconConteinerSetting.backgroundColor = nil
     }
 
     public func configurationSetting(with model: SettingsOptions) {
-        label.text = model.title
-        iconView.image = model.icon
-        iconConteiner.backgroundColor = model.iconBackgroundColor
+        labelSetting.text = model.title
+        iconViewSetting.image = model.icon
+        iconConteinerSetting.backgroundColor = model.iconBackgroundColor
     }
 
     private func setupHierarchy() {
-        iconConteiner.addSubview(iconView)
-        contentView.addSubview(iconConteiner)
-        contentView.addSubview(label)
+        iconConteinerSetting.addSubview(iconViewSetting)
+        contentView.addSubview(iconConteinerSetting)
+        contentView.addSubview(labelSetting)
     }
 
     func setupLayout() {
         NSLayoutConstraint.activate([
 
-            iconView.centerXAnchor.constraint(equalTo: iconConteiner.centerXAnchor),
-            iconView.centerYAnchor.constraint(equalTo: iconConteiner.centerYAnchor),
+            iconViewSetting.centerXAnchor.constraint(equalTo: iconConteinerSetting.centerXAnchor),
+            iconViewSetting.centerYAnchor.constraint(equalTo: iconConteinerSetting.centerYAnchor),
 
-            iconConteiner.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
-            iconConteiner.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            iconConteiner.heightAnchor.constraint(equalToConstant: 28),
-            iconConteiner.widthAnchor.constraint(equalToConstant: 28),
+            iconConteinerSetting.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
+            iconConteinerSetting.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            iconConteinerSetting.heightAnchor.constraint(equalToConstant: 30),
+            iconConteinerSetting.widthAnchor.constraint(equalToConstant: 30),
 
-            label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            label.leftAnchor.constraint(equalTo: iconConteiner.rightAnchor, constant: 15)
+            labelSetting.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            labelSetting.leftAnchor.constraint(equalTo: iconConteinerSetting.rightAnchor, constant: 15)
             ])
     }
 }
