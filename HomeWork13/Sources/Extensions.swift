@@ -35,6 +35,13 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models?.optionsModel[indexPath.section].options[indexPath.row]
 
+        var switchView: UISwitch = {
+            let switchView = UISwitch(frame: .zero)
+            switchView.setOn(false, animated: true)
+            switchView.tag = indexPath.row
+            return switchView
+        }()
+
         switch model {
 
         case .userCell(let cellModel):
@@ -46,6 +53,11 @@ extension ViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
             cell.configurationSetting(with: cellModel)
             cell.accessoryType = .disclosureIndicator
+            return cell
+        case .swichCell(let cellModel):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SwichTableViewCell.identifier, for: indexPath) as? SwichTableViewCell else { return UITableViewCell() }
+            cell.configurationSetting(with: cellModel)
+            cell.accessoryView = switchView
             return cell
         default:
             return UITableViewCell()
@@ -62,6 +74,8 @@ extension ViewController: UITableViewDataSource {
             detailViewController.fillSettings(with: cellModel)
         case .userCell(let cellModel):
             detailViewController.fillSettings(with: cellModel)
+        case .swichCell(let cellModel):
+            detailViewController.fillSettings(with: cellModel)
         default:
             break
         }
@@ -70,6 +84,7 @@ extension ViewController: UITableViewDataSource {
 }
 
 extension ViewController: UITableViewDelegate {
+
 
 
 }

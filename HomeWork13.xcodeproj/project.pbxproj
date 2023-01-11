@@ -10,6 +10,7 @@
 		DB388F6A296DE840001C43E2 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */; };
 		DB388F6E296F373C001C43E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6D296F373C001C43E2 /* DetailViewController.swift */; };
+		DB388F70296F693F001C43E2 /* SwichTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */; };
 		DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D329672D8300CE8365 /* AppDelegate.swift */; };
 		DBCA59D629672D8300CE8365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D529672D8300CE8365 /* SceneDelegate.swift */; };
 		DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D729672D8300CE8365 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		DB388F6D296F373C001C43E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwichTableViewCell.swift; sourceTree = "<group>"; };
 		DBCA59D029672D8300CE8365 /* HomeWork13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA59D329672D8300CE8365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCA59D529672D8300CE8365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				DBCA59E729672E7000CE8365 /* Sources */,
 				DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */,
 				DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */,
+				DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */,
 			);
 			path = HomeWork13;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				DBDD25E5296D871800C05A19 /* SettingsTableViewCell.swift in Sources */,
 				DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */,
 				DBCA59D629672D8300CE8365 /* SceneDelegate.swift in Sources */,
+				DB388F70296F693F001C43E2 /* SwichTableViewCell.swift in Sources */,
 				DBCA59EB29673AA000CE8365 /* Extensions.swift in Sources */,
 				DB388F6E296F373C001C43E2 /* DetailViewController.swift in Sources */,
 			);

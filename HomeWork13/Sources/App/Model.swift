@@ -18,6 +18,12 @@ struct SettingsOptions {
     let iconBackgroundColor: UIColor?
 }
 
+struct SwichButton {
+    let title: String
+    let icon: UIImage?
+    let iconBackgroundColor: UIColor?
+}
+
 struct UserOptions {
     let name: String
     let photo: UIImage?
@@ -27,6 +33,7 @@ struct UserOptions {
 enum SettingCell {
     case settingCell(cellModel: SettingsOptions)
     case userCell(cellModel: UserOptions)
+    case swichCell(cellModel: SwichButton)
 }
 
 struct Sections {
@@ -42,11 +49,11 @@ Sections(section: "One", options: [
 ]),
 
 Sections(section: "Two", options: [
-    .settingCell(cellModel: SettingsOptions(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange)),
+    .swichCell(cellModel: SwichButton(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange)),
     .settingCell(cellModel: SettingsOptions(title: "Wi-Fi", icon: UIImage(systemName: "wifi"), iconBackgroundColor: .systemBlue)),
     .settingCell(cellModel: SettingsOptions(title: "Bluetooth", icon: UIImage(named: "bluetooth"), iconBackgroundColor: .systemBlue)),
     .settingCell(cellModel: SettingsOptions(title: "Cотовая связь", icon: UIImage(systemName: "antenna.radiowaves.left.and.right"), iconBackgroundColor: .systemGreen)),
-    .settingCell(cellModel: SettingsOptions(title: "Режим модема", icon: UIImage(systemName: "personalhotspot"), iconBackgroundColor: .systemGreen)),
+    .swichCell(cellModel: SwichButton(title: "Режим модема", icon: UIImage(systemName: "personalhotspot"), iconBackgroundColor: .systemGreen)),
 ]),
 
 Sections(section: "Three", options: [

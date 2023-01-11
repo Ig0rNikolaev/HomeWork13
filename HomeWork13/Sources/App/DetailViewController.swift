@@ -88,4 +88,10 @@ final class DetailViewController: UIViewController {
         label.text = model.name
         iconView.image = model.photo
     }
+
+    public func fillSettings(with model: SwichButton) {
+        label.text = model.title
+        iconView.image = model.icon
+        iconConteiner.backgroundColor = model.iconBackgroundColor
+    }
 }
