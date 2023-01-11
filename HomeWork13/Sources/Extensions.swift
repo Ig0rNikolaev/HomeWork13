@@ -10,11 +10,15 @@ import UIKit
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        models.optionsModel[section].options.count
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
         models.optionsModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = models.optionsModel[indexPath.row]
+        let model = models.optionsModel[indexPath.section].options[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else {
             return UITableViewCell()
         }
@@ -24,12 +28,6 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-
-
-
-
-
-
 
 extension ViewController: UITableViewDelegate {
 
