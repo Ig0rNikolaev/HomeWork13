@@ -62,7 +62,7 @@ Sections(section: "four", options: [
     .settingCell(cellModel: SettingsOptions(title: "Экран и яркость", icon: UIImage(systemName: "textformat.size"), iconBackgroundColor: .systemBlue)),
     .settingCell(cellModel: SettingsOptions(title: "Face ID и код-пароль", icon: UIImage(systemName: "faceid"), iconBackgroundColor: .systemGreen)),
     .settingCell(cellModel: SettingsOptions(title: "Аккумулятор", icon: UIImage(systemName: "battery.100"), iconBackgroundColor: .systemGreen)),
-    .settingCell(cellModel: SettingsOptions(title: "Конфиденциальность и безопасность", icon: UIImage(systemName: "hand.raised.fill"), iconBackgroundColor: .systemBlue)),
+    .settingCell(cellModel: SettingsOptions(title: "Конфиденциальность\n и безопасность", icon: UIImage(systemName: "hand.raised.fill"), iconBackgroundColor: .systemBlue)),
 ]),
 
 Sections(section: "five", options: [

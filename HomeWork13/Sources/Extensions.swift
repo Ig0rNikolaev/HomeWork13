@@ -18,9 +18,16 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.section == 0 {
+
+        switch indexPath.section {
+        case 0:
             return 88
+        case 3:
+            if indexPath.row == 5 {
+                return 64
+            }
+        default:
+            return 44
         }
         return 44
     }
@@ -30,17 +37,35 @@ extension ViewController: UITableViewDataSource {
 
         switch model {
 
-        case .userCell(let model):
+        case .userCell(let cellModel):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
-            cell.configurationUser(with: model)
+            cell.configurationUser(with: cellModel)
+            cell.accessoryType = .disclosureIndicator
             return cell
-        case .settingCell(let model):
+        case .settingCell(let cellModel):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
-            cell.configurationSetting(with: model)
+            cell.configurationSetting(with: cellModel)
+            cell.accessoryType = .disclosureIndicator
             return cell
         default:
             return UITableViewCell()
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        let model = models?.optionsModel[indexPath.section].options[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        switch model {
+        case .settingCell(let cellModel):
+            detailViewController.fillSettings(with: cellModel)
+        case .userCell(let cellModel):
+            detailViewController.fillSettings(with: cellModel)
+        default:
+            break
+        }
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
