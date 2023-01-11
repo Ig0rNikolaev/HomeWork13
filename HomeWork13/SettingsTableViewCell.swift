@@ -22,6 +22,7 @@ class SettingsTableViewCell: UITableViewCell {
     private let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.font = UIFont.systemFont(ofSize: 15.5, weight: .regular)
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -56,7 +57,7 @@ class SettingsTableViewCell: UITableViewCell {
         iconConteiner.backgroundColor = nil
     }
 
-    public func configuration(with model: SettingsOptions) {
+    public func configurationSetting(with model: SettingsOptions) {
         label.text = model.title
         iconView.image = model.icon
         iconConteiner.backgroundColor = model.iconBackgroundColor

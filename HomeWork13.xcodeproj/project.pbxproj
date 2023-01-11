@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB388F6A296DE840001C43E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DB388F69296DE840001C43E2 /* SnapKit */; };
+		DB388F6A296DE840001C43E2 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */; };
 		DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D329672D8300CE8365 /* AppDelegate.swift */; };
 		DBCA59D629672D8300CE8365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D529672D8300CE8365 /* SceneDelegate.swift */; };
 		DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D729672D8300CE8365 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		DBCA59D029672D8300CE8365 /* HomeWork13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA59D329672D8300CE8365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCA59D529672D8300CE8365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB388F6A296DE840001C43E2 /* SnapKit in Frameworks */,
+				DB388F6A296DE840001C43E2 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +67,7 @@
 				DBCA59E829672E7A00CE8365 /* Resources */,
 				DBCA59E729672E7000CE8365 /* Sources */,
 				DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */,
+				DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */,
 			);
 			path = HomeWork13;
 			sourceTree = "<group>";
@@ -116,7 +119,6 @@
 			);
 			name = HomeWork13;
 			packageProductDependencies = (
-				DB388F69296DE840001C43E2 /* SnapKit */,
 			);
 			productName = HomeWork13;
 			productReference = DBCA59D029672D8300CE8365 /* HomeWork13.app */;
@@ -147,7 +149,6 @@
 			);
 			mainGroup = DBCA59C729672D8300CE8365;
 			packageReferences = (
-				DB388F68296DE840001C43E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = DBCA59D129672D8300CE8365 /* Products */;
 			projectDirPath = "";
@@ -176,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBDD25E3296D828A00C05A19 /* Model.swift in Sources */,
+				DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */,
 				DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */,
 				DBDD25E5296D871800C05A19 /* SettingsTableViewCell.swift in Sources */,
 				DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */,
