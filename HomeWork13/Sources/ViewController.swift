@@ -18,6 +18,7 @@ final class ViewController: UIViewController {
         var tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
+        tableView.register(SwichTableViewCell.self, forCellReuseIdentifier: SwichTableViewCell.identifier)
         tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
