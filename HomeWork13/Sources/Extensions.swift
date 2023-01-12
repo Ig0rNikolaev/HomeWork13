@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         models?.optionsModel[section].options.count ?? 0
@@ -18,7 +18,6 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
         switch indexPath.section {
         case 0:
             return 88
@@ -35,15 +34,14 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models?.optionsModel[indexPath.section].options[indexPath.row]
 
-        var switchView: UISwitch = {
+        let switchView: UISwitch = {
             let switchView = UISwitch(frame: .zero)
-            switchView.setOn(false, animated: true)
+            switchView.setOn(true, animated: true)
             switchView.tag = indexPath.row
             return switchView
         }()
 
         switch model {
-
         case .userCell(let cellModel):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as? UserTableViewCell else { return UITableViewCell() }
             cell.configurationUser(with: cellModel)
@@ -81,12 +79,15 @@ extension ViewController: UITableViewDataSource {
         }
         navigationController?.pushViewController(detailViewController, animated: true)
     }
-}
 
-extension ViewController: UITableViewDelegate {
-
-
-
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            models?.optionsModel[indexPath.section].options.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+        }
+    }
 }
 
 
