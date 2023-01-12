@@ -1,15 +1,15 @@
 //
-//  SwichTableViewCell.swift
+//  SettingsTableViewCell.swift
 //  HomeWork13
 //
-//  Created by Игорь Николаев on 12.01.2023.
+//  Created by Игорь Николаев on 10.01.2023.
 //
 
 import UIKit
 
-class SwichTableViewCell: UITableViewCell {
+class SettingsTableViewCell: UITableViewCell {
 
-    static let identifier = "SwichTableViewCell"
+    static let identifier = "SettingsTableViewCell"
 
     private lazy var iconViewSetting: UIImageView = {
         let iconView = UIImageView()
@@ -57,7 +57,7 @@ class SwichTableViewCell: UITableViewCell {
         iconConteinerSetting.backgroundColor = nil
     }
 
-    public func configurationSetting(with model: SwichButton) {
+    public func configurationSetting(with model: SettingsOptions) {
         labelSetting.text = model.title
         iconViewSetting.image = model.icon
         iconConteinerSetting.backgroundColor = model.iconBackgroundColor
@@ -71,7 +71,6 @@ class SwichTableViewCell: UITableViewCell {
 
     func setupLayout() {
         NSLayoutConstraint.activate([
-
             iconViewSetting.centerXAnchor.constraint(equalTo: iconConteinerSetting.centerXAnchor),
             iconViewSetting.centerYAnchor.constraint(equalTo: iconConteinerSetting.centerYAnchor),
 
@@ -82,7 +81,6 @@ class SwichTableViewCell: UITableViewCell {
 
             labelSetting.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             labelSetting.leftAnchor.constraint(equalTo: iconConteinerSetting.rightAnchor, constant: 15)
-            ])
+        ])
     }
 }
-

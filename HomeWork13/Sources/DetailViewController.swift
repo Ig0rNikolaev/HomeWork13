@@ -5,7 +5,6 @@
 //  Created by Игорь Николаев on 11.01.2023.
 //
 
-import Foundation
 import UIKit
 
 final class DetailViewController: UIViewController {
@@ -62,7 +61,6 @@ final class DetailViewController: UIViewController {
 
     func setupLayout() {
         NSLayoutConstraint.activate([
-
             iconView.centerXAnchor.constraint(equalTo: iconConteiner.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: iconConteiner.centerYAnchor),
             iconView.heightAnchor.constraint(equalToConstant: 200),
@@ -75,7 +73,7 @@ final class DetailViewController: UIViewController {
 
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             label.topAnchor.constraint(equalTo:iconConteiner.bottomAnchor, constant: 25)
-            ])
+        ])
     }
 
     public func fillSettings(with model: SettingsOptions) {

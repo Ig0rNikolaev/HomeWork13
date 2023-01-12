@@ -82,29 +82,26 @@ class UserTableViewCell: UITableViewCell {
         contentView.addSubview(labelInfoUser)
     }
 
-        func setupLayout() {
-            NSLayoutConstraint.activate([
+    func setupLayout() {
+        NSLayoutConstraint.activate([
+            iconViewUser.centerXAnchor.constraint(equalTo: iconConteinerUser.centerXAnchor),
+            iconViewUser.centerYAnchor.constraint(equalTo: iconConteinerUser.centerYAnchor),
+            iconViewUser.heightAnchor.constraint(equalTo: iconConteinerUser.heightAnchor, constant: -5),
+            iconViewUser.widthAnchor.constraint(equalTo: iconConteinerUser.widthAnchor, constant: -5),
 
-                iconViewUser.centerXAnchor.constraint(equalTo: iconConteinerUser.centerXAnchor),
-                iconViewUser.centerYAnchor.constraint(equalTo: iconConteinerUser.centerYAnchor),
-                iconViewUser.heightAnchor.constraint(equalTo: iconConteinerUser.heightAnchor, constant: -5),
-                iconViewUser.widthAnchor.constraint(equalTo: iconConteinerUser.widthAnchor, constant: -5),
+            iconConteinerUser.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            iconConteinerUser.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
+            iconConteinerUser.heightAnchor.constraint(equalToConstant: 70),
+            iconConteinerUser.widthAnchor.constraint(equalToConstant: 70),
 
-                iconConteinerUser.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-                iconConteinerUser.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 20),
-                iconConteinerUser.heightAnchor.constraint(equalToConstant: 70),
-                iconConteinerUser.widthAnchor.constraint(equalToConstant: 70),
+            labelUser.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 20),
+            labelUser.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -20),
 
-                labelUser.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 20),
-                labelUser.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: -20),
-
-                labelInfoUser.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 15),
-                labelInfoUser.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 10),
-
-
-            ])
-        }
+            labelInfoUser.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 15),
+            labelInfoUser.centerYAnchor.constraint(equalTo: contentView.centerYAnchor, constant: 10),
+        ])
     }
+}
 
 
 

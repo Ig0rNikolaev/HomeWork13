@@ -8,9 +8,9 @@
 import UIKit
 
 final class ViewController: UIViewController {
-
- static let identifier = "ViewController"
- var models: SettingProtocol?
+    
+    static let identifier = "ViewController"
+    var models: SettingProtocol?
 
     //MARK: - Outlets
 
@@ -58,7 +58,6 @@ final class ViewController: UIViewController {
 
     private func setupLayout() {
         NSLayoutConstraint.activate([
-
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
