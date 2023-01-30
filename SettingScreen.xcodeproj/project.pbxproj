@@ -11,13 +11,12 @@
 		DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */; };
 		DB388F6E296F373C001C43E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6D296F373C001C43E2 /* DetailViewController.swift */; };
 		DB388F70296F693F001C43E2 /* SwichTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */; };
-		DB388F7229701DDF001C43E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F7129701DDE001C43E2 /* Constants.swift */; };
+		DB4F4C6B2988380600AD8DA7 /* SettingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F4C6A2988380600AD8DA7 /* SettingScreenModel.swift */; };
 		DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D329672D8300CE8365 /* AppDelegate.swift */; };
 		DBCA59D629672D8300CE8365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D529672D8300CE8365 /* SceneDelegate.swift */; };
 		DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D729672D8300CE8365 /* ViewController.swift */; };
 		DBCA59DD29672D8500CE8365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCA59DC29672D8500CE8365 /* Assets.xcassets */; };
 		DBCA59E029672D8500CE8365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCA59DE29672D8500CE8365 /* LaunchScreen.storyboard */; };
-		DBCA59EB29673AA000CE8365 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59EA29673AA000CE8365 /* Extensions.swift */; };
 		DBDD25E3296D828A00C05A19 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD25E2296D828A00C05A19 /* Model.swift */; };
 		DBDD25E5296D871800C05A19 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -26,15 +25,14 @@
 		DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		DB388F6D296F373C001C43E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwichTableViewCell.swift; sourceTree = "<group>"; };
-		DB388F7129701DDE001C43E2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DBCA59D029672D8300CE8365 /* HomeWork13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork13.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4F4C6A2988380600AD8DA7 /* SettingScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenModel.swift; sourceTree = "<group>"; };
+		DBCA59D029672D8300CE8365 /* SettingScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA59D329672D8300CE8365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCA59D529672D8300CE8365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DBCA59D729672D8300CE8365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBCA59DC29672D8500CE8365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCA59DF29672D8500CE8365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBCA59E129672D8500CE8365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBCA59EA29673AA000CE8365 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DBDD25E2296D828A00C05A19 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,16 +55,50 @@
 				DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */,
 				DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */,
 				DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */,
-				DBDD25E2296D828A00C05A19 /* Model.swift */,
-				DB388F7129701DDE001C43E2 /* Constants.swift */,
 			);
 			path = CustomModule;
+			sourceTree = "<group>";
+		};
+		DB4F4C66298836B900AD8DA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBDD25E2296D828A00C05A19 /* Model.swift */,
+				DB4F4C6A2988380600AD8DA7 /* SettingScreenModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB4F4C67298836C900AD8DA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB388F7329702A22001C43E2 /* CustomModule */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB4F4C68298836E800AD8DA7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB388F6D296F373C001C43E2 /* DetailViewController.swift */,
+				DBCA59D729672D8300CE8365 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB4F4C692988372100AD8DA7 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F4C68298836E800AD8DA7 /* Controller */,
+				DB4F4C67298836C900AD8DA7 /* View */,
+				DB4F4C66298836B900AD8DA7 /* Model */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		DBCA59C729672D8300CE8365 = {
 			isa = PBXGroup;
 			children = (
-				DBCA59D229672D8300CE8365 /* HomeWork13 */,
+				DBCA59D229672D8300CE8365 /* SettingScreen */,
 				DBCA59D129672D8300CE8365 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,28 +106,25 @@
 		DBCA59D129672D8300CE8365 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBCA59D029672D8300CE8365 /* HomeWork13.app */,
+				DBCA59D029672D8300CE8365 /* SettingScreen.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DBCA59D229672D8300CE8365 /* HomeWork13 */ = {
+		DBCA59D229672D8300CE8365 /* SettingScreen */ = {
 			isa = PBXGroup;
 			children = (
 				DBCA59E829672E7A00CE8365 /* Resources */,
 				DBCA59E729672E7000CE8365 /* Sources */,
-				DB388F7329702A22001C43E2 /* CustomModule */,
 			);
-			path = HomeWork13;
+			path = SettingScreen;
 			sourceTree = "<group>";
 		};
 		DBCA59E729672E7000CE8365 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DB4F4C692988372100AD8DA7 /* Scene */,
 				DBCA59E929672E9000CE8365 /* App */,
-				DBCA59D729672D8300CE8365 /* ViewController.swift */,
-				DBCA59EA29673AA000CE8365 /* Extensions.swift */,
-				DB388F6D296F373C001C43E2 /* DetailViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -122,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBCA59CF29672D8300CE8365 /* HomeWork13 */ = {
+		DBCA59CF29672D8300CE8365 /* SettingScreen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBCA59E429672D8500CE8365 /* Build configuration list for PBXNativeTarget "HomeWork13" */;
+			buildConfigurationList = DBCA59E429672D8500CE8365 /* Build configuration list for PBXNativeTarget "SettingScreen" */;
 			buildPhases = (
 				DBCA59CC29672D8300CE8365 /* Sources */,
 				DBCA59CD29672D8300CE8365 /* Frameworks */,
@@ -134,11 +163,11 @@
 			);
 			dependencies = (
 			);
-			name = HomeWork13;
+			name = SettingScreen;
 			packageProductDependencies = (
 			);
 			productName = HomeWork13;
-			productReference = DBCA59D029672D8300CE8365 /* HomeWork13.app */;
+			productReference = DBCA59D029672D8300CE8365 /* SettingScreen.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DBCA59CB29672D8300CE8365 /* Build configuration list for PBXProject "HomeWork13" */;
+			buildConfigurationList = DBCA59CB29672D8300CE8365 /* Build configuration list for PBXProject "SettingScreen" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -171,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBCA59CF29672D8300CE8365 /* HomeWork13 */,
+				DBCA59CF29672D8300CE8365 /* SettingScreen */,
 			);
 		};
 /* End PBXProject section */
@@ -195,13 +224,12 @@
 			files = (
 				DBDD25E3296D828A00C05A19 /* Model.swift in Sources */,
 				DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */,
+				DB4F4C6B2988380600AD8DA7 /* SettingScreenModel.swift in Sources */,
 				DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */,
 				DBDD25E5296D871800C05A19 /* SettingsTableViewCell.swift in Sources */,
 				DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */,
-				DB388F7229701DDF001C43E2 /* Constants.swift in Sources */,
 				DBCA59D629672D8300CE8365 /* SceneDelegate.swift in Sources */,
 				DB388F70296F693F001C43E2 /* SwichTableViewCell.swift in Sources */,
-				DBCA59EB29673AA000CE8365 /* Extensions.swift in Sources */,
 				DB388F6E296F373C001C43E2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HomeWork13/Resources/Info.plist;
+				INFOPLIST_FILE = SettingScreen/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -368,7 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HomeWork13/Resources/Info.plist;
+				INFOPLIST_FILE = SettingScreen/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -389,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBCA59CB29672D8300CE8365 /* Build configuration list for PBXProject "HomeWork13" */ = {
+		DBCA59CB29672D8300CE8365 /* Build configuration list for PBXProject "SettingScreen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBCA59E229672D8500CE8365 /* Debug */,
@@ -398,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBCA59E429672D8500CE8365 /* Build configuration list for PBXNativeTarget "HomeWork13" */ = {
+		DBCA59E429672D8500CE8365 /* Build configuration list for PBXNativeTarget "SettingScreen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBCA59E529672D8500CE8365 /* Debug */,
