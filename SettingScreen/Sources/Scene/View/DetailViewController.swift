@@ -9,9 +9,6 @@ import UIKit
 
 final class DetailViewController: UIViewController {
 
-    static let identifier = "DetailViewController"
-    var models: SettingProtocol?
-
     private lazy var iconView: UIImageView = {
         let iconView = UIImageView()
         iconView.contentMode = .center
