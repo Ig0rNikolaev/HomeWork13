@@ -9,75 +9,54 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    static let identifier = "ViewController"
-    var models: SettingProtocol?
+    var models = Models()
 
-    //MARK: - Outlets
-
-    private lazy var tableView: UITableView = {
-        var tableView = UITableView(frame: .zero, style: .insetGrouped)
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
-        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
-        tableView.register(SwichTableViewCell.self, forCellReuseIdentifier: SwichTableViewCell.identifier)
-        tableView.frame = view.bounds
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
-    }()
+    private var settingScreenView: SettingScreenView? {
+        guard isViewLoaded else { return nil }
+        return view as? SettingScreenView
+    }
 
     //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupHierarchy()
-        setupLayout()
+        configurationDataDelegate()
     }
 
-    init(model: SettingProtocol?) {
-        self.models = model
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
 
     //MARK: - Setup
+
+    override func loadView() {
+        view = SettingScreenView()
+    }
+
+    private func configurationDataDelegate() {
+        settingScreenView?.tableView.delegate = self
+        settingScreenView?.tableView.dataSource = self
+    }
+
+   
 
     private func setupTableView() {
         view.backgroundColor = .systemGray6
         title = "Настройки"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
-    private func setupHierarchy() {
-        view.addSubview(tableView)
-    }
-
-    private func setupLayout() {
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-        ])
-    }
 }
 
 extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        models?.optionsModel[section].options.count ?? 0
+        models.optionsModel[section].options.count
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        models?.optionsModel.count ?? 0
+        models.optionsModel.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = models?.optionsModel[indexPath.section].options[indexPath.row]
+        let model = models.optionsModel[indexPath.section].options[indexPath.row]
 
         let switchView: UISwitch = {
             let switchView = UISwitch(frame: .zero)
@@ -110,7 +89,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            models?.optionsModel[indexPath.section].options.remove(at: indexPath.row)
+            models.optionsModel[indexPath.section].options.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
@@ -135,7 +114,7 @@ extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
-        let model = models?.optionsModel[indexPath.section].options[indexPath.row]
+        let model = models.optionsModel[indexPath.section].options[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
 
         switch model {
