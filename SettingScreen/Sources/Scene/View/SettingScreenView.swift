@@ -10,16 +10,16 @@ import UIKit
 
 final class SettingScreenView: UIView {
 
-        //MARK: - Outlets
+    //MARK: - Outlets
 
-         lazy var tableView: UITableView = {
-            var tableView = UITableView(frame: .zero, style: .insetGrouped)
-            tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
-            tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
-            tableView.register(SwichTableViewCell.self, forCellReuseIdentifier: SwichTableViewCell.identifier)
-            tableView.translatesAutoresizingMaskIntoConstraints = false
-            return tableView
-        }()
+    lazy var tableView: UITableView = {
+        var tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
+        tableView.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
+        tableView.register(SwichTableViewCell.self, forCellReuseIdentifier: SwichTableViewCell.identifier)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
 
     // MARK: - Initial
 
@@ -40,30 +40,18 @@ final class SettingScreenView: UIView {
         setupLayout()
     }
 
-        //MARK: - Setup
+    //MARK: - Setup
 
-        private func setupHierarchy() {
-            addSubview(tableView)
-        }
-
-        private func setupLayout() {
-            NSLayoutConstraint.activate([
-                tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-                tableView.rightAnchor.constraint(equalTo: self.rightAnchor),
-                tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-                tableView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            ])
-        }
+    private func setupHierarchy() {
+        addSubview(tableView)
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    private func setupLayout() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            tableView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: self.leftAnchor),
+        ])
+    }
+}

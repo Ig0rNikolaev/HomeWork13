@@ -11,14 +11,14 @@
 		DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */; };
 		DB388F6E296F373C001C43E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6D296F373C001C43E2 /* DetailViewController.swift */; };
 		DB388F70296F693F001C43E2 /* SwichTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */; };
-		DB4F4C6B2988380600AD8DA7 /* SettingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F4C6A2988380600AD8DA7 /* SettingScreenModel.swift */; };
+		DB4F4C6B2988380600AD8DA7 /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F4C6A2988380600AD8DA7 /* SettingScreen.swift */; };
 		DB56F32A298854B3000DEA9E /* SettingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56F329298854B3000DEA9E /* SettingScreenView.swift */; };
 		DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D329672D8300CE8365 /* AppDelegate.swift */; };
 		DBCA59D629672D8300CE8365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D529672D8300CE8365 /* SceneDelegate.swift */; };
-		DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D729672D8300CE8365 /* ViewController.swift */; };
+		DBCA59D829672D8300CE8365 /* SettingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA59D729672D8300CE8365 /* SettingScreenController.swift */; };
 		DBCA59DD29672D8500CE8365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCA59DC29672D8500CE8365 /* Assets.xcassets */; };
 		DBCA59E029672D8500CE8365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCA59DE29672D8500CE8365 /* LaunchScreen.storyboard */; };
-		DBDD25E3296D828A00C05A19 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD25E2296D828A00C05A19 /* Model.swift */; };
+		DBDD25E3296D828A00C05A19 /* SettingScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD25E2296D828A00C05A19 /* SettingScreenModel.swift */; };
 		DBDD25E5296D871800C05A19 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,16 +26,16 @@
 		DB388F6B296ECE03001C43E2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		DB388F6D296F373C001C43E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DB388F6F296F693F001C43E2 /* SwichTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwichTableViewCell.swift; sourceTree = "<group>"; };
-		DB4F4C6A2988380600AD8DA7 /* SettingScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenModel.swift; sourceTree = "<group>"; };
+		DB4F4C6A2988380600AD8DA7 /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		DB56F329298854B3000DEA9E /* SettingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenView.swift; sourceTree = "<group>"; };
 		DBCA59D029672D8300CE8365 /* SettingScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCA59D329672D8300CE8365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCA59D529672D8300CE8365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBCA59D729672D8300CE8365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBCA59D729672D8300CE8365 /* SettingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenController.swift; sourceTree = "<group>"; };
 		DBCA59DC29672D8500CE8365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCA59DF29672D8500CE8365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBCA59E129672D8500CE8365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBDD25E2296D828A00C05A19 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DBDD25E2296D828A00C05A19 /* SettingScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenModel.swift; sourceTree = "<group>"; };
 		DBDD25E4296D871800C05A19 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,8 +64,8 @@
 		DB4F4C66298836B900AD8DA7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DBDD25E2296D828A00C05A19 /* Model.swift */,
-				DB4F4C6A2988380600AD8DA7 /* SettingScreenModel.swift */,
+				DBDD25E2296D828A00C05A19 /* SettingScreenModel.swift */,
+				DB4F4C6A2988380600AD8DA7 /* SettingScreen.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 		DB4F4C67298836C900AD8DA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB388F7329702A22001C43E2 /* CustomModule */,
 				DB56F329298854B3000DEA9E /* SettingScreenView.swift */,
 				DB388F6D296F373C001C43E2 /* DetailViewController.swift */,
-				DB388F7329702A22001C43E2 /* CustomModule */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -83,7 +83,7 @@
 		DB4F4C68298836E800AD8DA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DBCA59D729672D8300CE8365 /* ViewController.swift */,
+				DBCA59D729672D8300CE8365 /* SettingScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,10 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBDD25E3296D828A00C05A19 /* Model.swift in Sources */,
+				DBDD25E3296D828A00C05A19 /* SettingScreenModel.swift in Sources */,
 				DB388F6C296ECE03001C43E2 /* UserTableViewCell.swift in Sources */,
-				DB4F4C6B2988380600AD8DA7 /* SettingScreenModel.swift in Sources */,
-				DBCA59D829672D8300CE8365 /* ViewController.swift in Sources */,
+				DB4F4C6B2988380600AD8DA7 /* SettingScreen.swift in Sources */,
+				DBCA59D829672D8300CE8365 /* SettingScreenController.swift in Sources */,
 				DBDD25E5296D871800C05A19 /* SettingsTableViewCell.swift in Sources */,
 				DB56F32A298854B3000DEA9E /* SettingScreenView.swift in Sources */,
 				DBCA59D429672D8300CE8365 /* AppDelegate.swift in Sources */,

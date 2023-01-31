@@ -7,9 +7,10 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SettingScreenViewController: UIViewController {
     
-    var models = Models()
+    let models = SettingScreenModels()
+    let detailViewController = DetailViewController()
 
     private var settingScreenView: SettingScreenView? {
         guard isViewLoaded else { return nil }
@@ -24,7 +25,6 @@ final class ViewController: UIViewController {
         configurationDataDelegate()
     }
 
-
     //MARK: - Setup
 
     override func loadView() {
@@ -36,8 +36,6 @@ final class ViewController: UIViewController {
         settingScreenView?.tableView.dataSource = self
     }
 
-   
-
     private func setupTableView() {
         view.backgroundColor = .systemGray6
         title = "Настройки"
@@ -45,7 +43,7 @@ final class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension SettingScreenViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         models.optionsModel[section].options.count
@@ -96,7 +94,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension SettingScreenViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
@@ -113,7 +111,6 @@ extension ViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = DetailViewController()
         let model = models.optionsModel[indexPath.section].options[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
 
@@ -130,5 +127,3 @@ extension ViewController: UITableViewDelegate {
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
-
-
