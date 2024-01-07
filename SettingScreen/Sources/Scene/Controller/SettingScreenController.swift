@@ -8,10 +8,9 @@
 import UIKit
 
 final class SettingScreenViewController: UIViewController {
-    
-    let models = SettingScreenModels()
-    let detailViewController = DetailViewController()
 
+    var models: SettingScreenModels?
+    var detailViewController: DetailViewController?
     private var settingScreenView: SettingScreenView? {
         guard isViewLoaded else { return nil }
         return view as? SettingScreenView
@@ -22,6 +21,7 @@ final class SettingScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        configuration()
         configurationDataDelegate()
     }
 
@@ -29,6 +29,11 @@ final class SettingScreenViewController: UIViewController {
 
     override func loadView() {
         view = SettingScreenView()
+    }
+
+    private func configuration() {
+        models = SettingScreenModels()
+        detailViewController = DetailViewController()
     }
 
     private func configurationDataDelegate() {
@@ -46,15 +51,15 @@ final class SettingScreenViewController: UIViewController {
 extension SettingScreenViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        models.optionsModel[section].options.count
+        (models?.optionsModel[section].options.count ??  0)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        models.optionsModel.count
+        models?.optionsModel.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = models.optionsModel[indexPath.section].options[indexPath.row]
+        let model = models?.optionsModel[indexPath.section].options[indexPath.row]
 
         let switchView: UISwitch = {
             let switchView = UISwitch(frame: .zero)
@@ -87,7 +92,7 @@ extension SettingScreenViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            models.optionsModel[indexPath.section].options.remove(at: indexPath.row)
+            models?.optionsModel[indexPath.section].options.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
@@ -111,19 +116,19 @@ extension SettingScreenViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let model = models.optionsModel[indexPath.section].options[indexPath.row]
+        let model = models?.optionsModel[indexPath.section].options[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
 
         switch model {
         case .settingCell(let cellModel):
-            detailViewController.fillSettings(with: cellModel)
+            detailViewController?.fillSettings(with: cellModel)
         case .userCell(let cellModel):
-            detailViewController.fillSettings(with: cellModel)
+            detailViewController?.fillSettings(with: cellModel)
         case .swichCell(let cellModel):
-            detailViewController.fillSettings(with: cellModel)
+            detailViewController?.fillSettings(with: cellModel)
         default:
             break
         }
-        navigationController?.pushViewController(detailViewController, animated: true)
+        navigationController?.pushViewController(detailViewController ?? DetailViewController(), animated: true)
     }
 }

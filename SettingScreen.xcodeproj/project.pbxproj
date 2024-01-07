@@ -91,9 +91,9 @@
 		DB4F4C692988372100AD8DA7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DB4F4C68298836E800AD8DA7 /* Controller */,
-				DB4F4C67298836C900AD8DA7 /* View */,
 				DB4F4C66298836B900AD8DA7 /* Model */,
+				DB4F4C67298836C900AD8DA7 /* View */,
+				DB4F4C68298836E800AD8DA7 /* Controller */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -126,8 +126,8 @@
 		DBCA59E729672E7000CE8365 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DB4F4C692988372100AD8DA7 /* Scene */,
 				DBCA59E929672E9000CE8365 /* App */,
+				DB4F4C692988372100AD8DA7 /* Scene */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
