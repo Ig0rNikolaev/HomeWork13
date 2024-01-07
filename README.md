@@ -2,7 +2,7 @@
 
 Верстка экрана "Настройки". 
 
-Стэк: UIKit
+Стэк: UIKit, MVC
 
 <p align="left">
   <img width="200" height="432" src="https://github.com/Ig0rNikolaev/HomeWork13/blob/develop/screen1.png">
